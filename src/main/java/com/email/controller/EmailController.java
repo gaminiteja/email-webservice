@@ -25,6 +25,7 @@ public class EmailController {
 	public ResponseEntity<?> senEmail(@RequestBody EmailDTO emailDto) {
 
 		System.out.println(emailDto);
+		
 		return emailService.sendEmail(emailDto.getSubject(), emailDto.getText(), emailDto.getTo());
 	}
 
